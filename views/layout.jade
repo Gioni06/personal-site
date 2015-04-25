@@ -1,0 +1,19 @@
+doctype html
+html.no-js(lang='en')
+
+  head
+    include partials/_meta.jade
+    include partials/_html5shiv.jade
+    include partials/_fonts.jade
+    title= _path
+    != css('../')
+
+  body
+    div.wrapper
+      block content
+      footer  
+        ul
+          - for profile in contentful.social_media_accounts
+            li
+              a(href="#{profile.link}" title="#{profile.plattform}" target="_blank")!=profile.unicodeIcon  
+    != js('../')

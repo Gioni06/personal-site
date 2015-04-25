@@ -1,0 +1,29 @@
+article{
+  margin-top: @h1-margin-top;
+  margin-bottom: @h1-margin-bottom;
+  header{
+    h4{ 
+        color: @secondary-color;
+        font-weight: 400;
+    }
+    h2 a{
+      font-size: @h2-font-size;
+      margin-top: -@h2-margin-bottom/2;
+      font-weight: 300;
+      text-decoratrion: none;
+      border-bottom: none;
+      &:hover{
+        border-bottom: none;
+      }
+    }
+    p{
+      margin-top: -@h2-margin-bottom/2;
+      font-size: 90%;
+      font-weight: 400;
+    }
+  }
+  main{
+    border-bottom: 1px solid @dimm-color;
+
+  }
+}

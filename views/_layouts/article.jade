@@ -1,0 +1,18 @@
+- for post in contentful.blog_posts
+    article(itemscope='', itemtype='http://schema.org/Article')
+        header
+            h4=post.category
+            h2(itemprop='name headline')
+              a(href='blog/#{slugify(post.title)}')=post.title    
+            p
+              | Posted on 
+              meta(itemprop='datePublished', content='#{post.createdAt}')
+              =post.createdAt
+              each entry in post.author
+                span(itemprop='author')  by #{entry.fields.name || 'not specifiyed'}
+
+              each entry in post.relatedPosts
+                span  | Related Posts - 
+                a(href='blog/#{slugify(entry.fields.title)}')=entry.fields.title
+ 
+        main.entry-content(itemprop='articleBody')!=markdown(post.exerpt)

@@ -1,0 +1,6 @@
+- for about in contentful.abouts
+  article
+    header
+      h2= about.title
+    main
+      div!= markdown(about.article)

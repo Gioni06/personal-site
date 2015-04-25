@@ -1,0 +1,14 @@
+extends layout
+block content
+  .menu
+    div#brand
+      - for about in contentful.abouts
+        a(href="about.html")=about.title
+    #contact
+      a.button(href="#") contact  
+  .content.about
+    - for about in contentful.abouts
+      div!=markdown(about.exerpt)
+  #blog-wrapper
+    .content
+      include _layouts/article.jade    

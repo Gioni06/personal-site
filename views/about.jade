@@ -1,0 +1,11 @@
+extends layout
+block content
+  .menu
+    div#brand
+      - for about in contentful.abouts
+        a(href="index.html")=about.title
+    #contact
+      a.button(href="#") contact  
+  .content.about
+    - for about in contentful.abouts
+      div!=markdown(about.content)

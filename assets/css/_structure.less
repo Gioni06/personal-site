@@ -1,0 +1,97 @@
+// Pretty Fonts
+::selection {
+  background: lighten(@secondary-color,20); /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: lighten(@highlight-color,30); /* Gecko Browsers */
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.25),
+only screen and ( min-device-pixel-ratio: 1.25),
+only screen and ( min-resolution: 200dpi),
+only screen and ( min-resolution: 1.25dppx)
+{
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+// Main Site
+body {
+  font-size: @main-font-size-body;
+  font-family: @font-family-sans-serif;
+  color: @main-color;
+  font-weight: 300;
+  line-height: 1.611111111em;
+}
+
+footer{
+  padding: @base-line-height 0;
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li{
+      display: inline-block;
+      margin-right: 30px;
+    }
+  }
+}
+a{
+  color: #8cc63f;
+  font-weight: 400;
+  text-decoration: none;
+  padding-bottom: 2px;
+  .transition();
+  &:hover{
+    .transition();
+    color: @highlight-color;
+  }
+}
+
+a.button{
+  color: @secondary-color;
+  text-decoration: none;
+  border-bottom: none;
+  border: 1px solid @secondary-color;
+  border-radius: 4px;
+  .transition();
+  &:hover{
+    .transition();
+    color: @highlight-color;
+    border: 1px solid @highlight-color;
+  }
+}
+div.wrapper{
+  .flex-display();
+  .flex-wrap(wrap);
+  max-width: @main-wrapper-size;
+  margin: 0 auto;
+  padding: @base-line-height;
+}
+div.content{
+  .flex-display();
+  .flex-direction(column);
+  text-align: justify;
+}
+div.menu{
+  .flex-display();
+  .justify-content(space-between);
+  width: 100%;
+  margin-top: @base-line-height*2;
+  margin-bottom: @base-line-height*2;
+  #brand a{
+    color: @dark-color;
+    text-decoration: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+
+  }
+  #contact {
+
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "roots-sample",
+  "description": "A Simple Example Site",
+  "dependencies": {
+    "autoprefixer-stylus": "0.5.x",
+    "axis": "0.3.x",
+    "coffee-script": "1.8.x",
+    "css-pipeline": "0.2.x",
+    "jade": "1.x",
+    "js-pipeline": "0.2.x",
+    "less": "^2.5.0",
+    "marked": "0.3.x",
+    "roots": "^3.0.4",
+    "roots-contentful": "0.0.7",
+    "rupture": "0.6.x",
+    "slug": "^0.9.1",
+    "stylus": "0.49.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gioni06/roots-sample.git"
+  }
+}

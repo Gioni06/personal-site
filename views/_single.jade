@@ -1,0 +1,14 @@
+extends layout
+block content
+  article(itemscope='', itemtype='http://schema.org/Article')
+        header
+            h4=category
+            h2(itemprop='#{entry.title}')=entry.title  
+            p
+              | Posted on 
+              meta(itemprop='datePublished', content='#{entry.createdAt}')
+              =entry.createdAt 
+              span(itemprop='author')   
+        main.entry-content(itemprop='articleBody')!=markdown(entry.content)
+        footer
+            include _related.jade       
